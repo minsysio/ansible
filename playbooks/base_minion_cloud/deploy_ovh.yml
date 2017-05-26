@@ -11,7 +11,7 @@
         msg: "No deployment this time... aborted by user"
       when: confirm != 'yes'
   roles:
-    - dist_update_upgrade-ovh
+    - dist_update_upgrade
     
   post_tasks:
     - name:  Restart rsyslog to sync with newly intalled timezone 
