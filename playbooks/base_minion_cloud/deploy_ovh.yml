@@ -13,5 +13,6 @@
   roles:
     - dist_update_upgrade
     - addgroups_initial
+    - adduser_lvi
     
  
