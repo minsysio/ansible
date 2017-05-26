@@ -1,0 +1,11 @@
+---
+- name: Create the groups -admins, sshusers- for leading users.
+  group: 
+    name: {{ item }} 
+    state: present
+  with_items:
+    - admins
+    - sshusers
+  become: true
+
+
