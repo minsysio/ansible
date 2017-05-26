@@ -1,0 +1,18 @@
+---
+
+- name: 'Basic & Standard ++MINION++ Provisionning on cloud.minsys.io'
+  hosts: base_minion_cloud
+  vars_prompt:
+    - name: "confirm"
+      prompt: "You really want to initiate this ++MINION++ ? yes / no"
+      private: no
+  pre_tasks:     
+    - fail: 
+        msg: "No deployment this time... aborted by user"
+      when: confirm != 'yes'
+  roles:
+    - dist_update_upgrade-ovh
+    
+  post_tasks:
+    - name:  Restart rsyslog to sync with newly intalled timezone 
+      service: name=rsyslog state=restarted
