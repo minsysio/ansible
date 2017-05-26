@@ -4,3 +4,4 @@
     upgrade: dist 
     update_cache: yes 
     dpkg_options: 'force-confold,force-confdef'
+  become: true
