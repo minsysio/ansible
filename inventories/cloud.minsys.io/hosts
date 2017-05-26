@@ -1,0 +1,7 @@
+[ovh_system_base]
+
+
+[ovh_system_base:vars]
+host_key_checking= False
+ansible_ssh_user= ubuntu
+ansible_ssh_private_key_file= /root/.ssh/ansible_rsa
