@@ -9,3 +9,27 @@
     pkg: htop
     state: present 
   become: true
+
+- name: Install mtr, a network-diagnostics tool, thx Matt :-) 
+  apt: 
+    pkg: mtr
+    state: present 
+  become: true
+
+- name: Install iotop, a Disk I/Os diagnostics tool
+  apt: 
+    pkg: iotop
+    state: present 
+  become: true
+
+- name: Install iftop, bandwidth usage on interfaces 
+  apt: 
+    pkg: iftop
+    state: present 
+  become: true
+
+- name: Install sysstat, various utilities to monitor system performance and usage activity 
+  apt: 
+    pkg: sysstat
+    state: present 
+  become: true
