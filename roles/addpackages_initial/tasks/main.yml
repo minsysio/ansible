@@ -1,0 +1,11 @@
+- name: Install secure-delete tools, for managing deletion securely.
+  apt: 
+    pkg: secure-delete
+    state: present
+  become: true    
+
+- name: Install htop, an unteractive process viewer for UNIX.
+  apt: 
+    pkg: htop
+    state: present 
+  become: true

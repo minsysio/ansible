@@ -15,5 +15,6 @@
     - addgroups_initial
     - adduser_lvi
     - motd_minsys
+    - addpackages_initial
     
  
