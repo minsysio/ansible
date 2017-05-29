@@ -1,0 +1,79 @@
+# Fail2Ban configuration file.
+# See default values at the end of the file
+#
+# !!!----THIS IS AN ANSIBLE MANAGED FILE ----!!!
+#
+# Need help ? Contact : support@minsys.io 
+
+
+[DEFAULT]
+
+# CORE CONFIG
+
+ignoreip = {{ fail2ban.config.ignoreip }}
+bantime  = {{ fail2ban.config.bantime }}
+findtime = {{ fail2ban.config.findtime }}
+maxretry = {{ fail2ban.config.maxretry }}
+backend = {{ fail2ban.config.backend }}
+usedns = {{ fail2ban.config.usedns }}
+destemail = {{ fail2ban.config.destemail }}
+sendername = {{ fail2ban.config.sendername }}
+banaction = {{ fail2ban.config.banaction }}
+mta = {{ fail2ban.config.mta }}
+protocol = {{ fail2ban.config.protocol }}
+chain = {{ fail2ban.config.chain }}
+
+# ACTIONS : ban only with iptables-multiports
+
+action_ = %(banaction)s[name=%(__name__)s, port="%(port)s", protocol="%(protocol)s", chain="%(chain)s"]
+action = %(action_)s
+
+# JAILS
+
+
+[ssh]
+
+enabled  = true
+port     = ssh
+filter   = sshd
+action = iptables[name=SSH, port=ssh, protocol=tcp]
+logpath  = /var/log/auth.log
+
+
+[ssh-ddos]
+
+enabled  = true
+port     = ssh
+filter   = sshd-ddos
+logpath  = /var/log/auth.log
+
+
+
+# End of Fail2Ban configuration file.
+#
+# !!!----THIS IS AN ANSIBLE MANAGED FILE ----!!!
+#
+# 
+#Default values:
+#ignoreip = 127.0.0.1/8
+#bantime  = 600
+#findtime = 600
+#maxretry = 3
+#backend = auto
+#usedns = warn
+#destemail = root@localhost
+#sendername = Fail2Ban
+#banaction = iptables-multiport
+#mta = sendmail
+#protocol = tcp
+#chain = INPUT
+#banaction = iptables-multiport
+#mta = sendmail
+#protocol = tcp
+#chain = INPUT
+
+
+
+---
+#This is a blank file 
+#Yep. 
