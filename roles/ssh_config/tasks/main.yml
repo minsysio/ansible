@@ -1,0 +1,14 @@
+---
+- name: Deploy minsys.io's sshd config
+  copy: 
+    src: /etc/ansible/roles/ssh_config/files/sshd_config
+    dest: /etc/ssh/sshd_config
+    owner: root 
+    group: root
+    mode: "u=rw,g=r,o=r"
+  become: true
+
+- name: Restart sshd daemon with new config
+  command: systemctl restart sshd.service  
+  become: true
+

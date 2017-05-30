@@ -33,3 +33,9 @@
     pkg: sysstat
     state: present 
   become: true
+
+- name: Install whowatch, Monitor who is doing what on your Linux
+  apt: 
+    pkg: whowatch
+    state: present 
+  become: true

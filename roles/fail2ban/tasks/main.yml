@@ -10,3 +10,7 @@
     src: jail.local.j2 
     dest: /etc/fail2ban/jail.local
   become: true
+
+- name: Restart fail2ban daemon with new config
+  command: systemctl restart fail2ban.service 
+  become: true

@@ -17,5 +17,6 @@
     - motd_minsys
     - addpackages_initial
     - fail2ban
+    - ssh_config
     
  
