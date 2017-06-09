@@ -16,6 +16,12 @@
     state: present 
   become: true
 
+- name: Install tree, a recursive directory listing program that produces a depth indented listing of files
+  apt: 
+    pkg: tree
+    state: present 
+  become: true
+
 - name: Install iotop, a Disk I/Os diagnostics tool
   apt: 
     pkg: iotop
