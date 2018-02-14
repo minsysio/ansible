@@ -1,6 +1,6 @@
 ---
 
-- name: 'Basic & Standard ++MINION++ Provisionning on cloud.minsys.io'
+- name: 'Basic & Standard ++MINION++ Provisionning on minsys.cloud'
   hosts: base_minion_cloud
   vars_prompt:
     - name: "confirm"
@@ -14,6 +14,7 @@
     - dist_update_upgrade
     - addgroups_initial
     - adduser_lvi
+    - adduser_cso
     - motd_minsys
     - addpackages_initial
     - fail2ban

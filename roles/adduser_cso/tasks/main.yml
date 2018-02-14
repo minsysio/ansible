@@ -1,0 +1,41 @@
+---
+
+- name: Create the cso group
+  group: 
+    name: cso 
+    state: present
+  become: true
+
+- name: Initial admin user creation - cso.
+  user: 
+    name: cso   
+    shell: /bin/bash
+    password: "{{ 'azerty123' | password_hash('sha512') }}" 
+    update_password: on_create
+    createhome: yes 
+    home: /home/cso 
+    groups: cso,sudo,admins,sshusers
+    append: yes
+  register: cso
+  become: true
+
+- name: Create .ssh/ directory in cso home directory  
+  file: 
+    path: /home/cso/.ssh 
+    state: directory
+    owner: cso
+    group: cso  
+    mode: "u=rw,g=rw,o=r"
+  become: true
+
+- name: Adding the cso public key to authorized_keys files.
+  authorized_key: 
+    user: cso 
+    key: "{{ lookup('file', '/root/.ssh/zeste.pub') }}"
+  become: true
+
+- name: User cso will have to change password at first connection.
+  shell: chage -d 0 cso
+  when: cso.changed
+  become: true
+
