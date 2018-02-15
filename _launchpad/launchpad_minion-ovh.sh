@@ -15,7 +15,7 @@ cd $ANSIBLE_CONFGIT_DIR
 svn update
 echo "Copy Repository = last updated working configuration, to Ansible Configuration Directory -> $ANSIBLE_CONF_DIR"
 cp -R $ANSIBLE_CONFGIT_TRUNK_DIR/* $ANSIBLE_CONF_DIR
-chmod u+x $LAUNCHPAD_DIR/launchpad_cloud.sh
+chmod u+x $LAUNCHPAD_DIR/launchpad_minion-ovh.sh
 :> /root/.ssh/known_hosts
 read -p 'Enter the ++MINION++ IP address  : ' ip_minion
 #Need Control structure for OVH / Other provider -> changing "ansible_ssh_user= && base_minion_cloud=$Provider
