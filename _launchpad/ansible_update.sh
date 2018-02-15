@@ -2,7 +2,7 @@
 
 #To update Ansible Directory after massive change - only SVN UPDATE + CP to ANSIBLE diretory 
 
-#Q : lvi@minsys.io - hi 
+#Q : lvi@minsys.io - hello 
 
 ANSIBLE_CONF_DIR=/etc/ansible
 ANSIBLE_CONFGIT_DIR=/opt/ansible
