@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#To deploy a cloud.minsys.io's MINION ready. For forge.minsys.io refer to launchpad_forge.sh
+#To deploy a minion(xy)-ovh.minsys.cloud ONLY
 #Q : lvi@minsys.io
 
 ANSIBLE_CONF_DIR=/etc/ansible
