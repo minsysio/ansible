@@ -2,8 +2,9 @@
 
 #To install new packages on minion(xy)-ovh.minsys.cloud ONLY
 
-# CHANGE : line 22
-# CHNAGE : line 32
+# CHANGE : line 13
+# CHANGE : line 23
+# CHNAGE : line 33
 
 #Q : lvi@minsys.io
 
