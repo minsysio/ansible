@@ -1,7 +1,7 @@
 - name: Loading the minsys.io motd  
   copy: 
     src: /etc/ansible/roles/motd_minsys/files/20_minsys-motd
-    dest: /etc/update-motd.d/20_minsys-motd
+    dest: /etc/update-motd.d/99-minsys-motd
     owner: root
     group: root
     mode: "u=rwx,g=rx,o=rx"
