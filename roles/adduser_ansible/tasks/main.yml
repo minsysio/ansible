@@ -1,15 +1,15 @@
 ---
 
-- name: Create user group(s)
-  group:
-    name: "{{ user_usergroup }}"
-    state: present
-  become: true
+#- name: Create user group(s)
+#  group:
+#    name: "{{ user_usergroup }}"
+#    state: present
+#  become: true
 
 - name: Create user
   user:
-    groups: "{{ (user_groups | join(',')) }}"
-    append: yes
+    groups: sudo,sshusers
+    append: True
     name: "{{ user_name }}"
     shell: "{{ user_shell }}"
   become: true
