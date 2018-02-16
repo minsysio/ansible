@@ -1,14 +1,6 @@
 [mining_minions]
-minion01-ovh.minsys.cloud
-minion02-ovh.minsys.cloud
-minion03-ovh.minsys.cloud
-minion04-ovh.minsys.cloud
-minion05-ovh.minsys.cloud
-minion06-ovh.minsys.cloud
-minion07-ovh.minsys.cloud
-minion08-ovh.minsys.cloud
-minion08-ovh.minsys.cloud
-ranch.minsys.cloud
+minion09-ovh.minsys.cloud
+
 
 [mining_minions:vars]
 host_key_checking= False
