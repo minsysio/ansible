@@ -1,6 +1,6 @@
 ---
-user_name: ansible
-user_usergroup: ansible
+user_name: "ansible"
+user_usergroup: "ansible"
 user_groups: ['sudo', 'sshusers']
 user_shell: "/bin/bash"
 user_ssh_key_path: "/root/.ssh/ansible_rsa"
