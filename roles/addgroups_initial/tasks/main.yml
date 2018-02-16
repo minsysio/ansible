@@ -8,4 +8,10 @@
     - sshusers
   become: true
 
+ name: Adding existing user ubuntu to group sshusers
+  user: name=ubuntu 
+        groups=sudo
+        append=yes
+  become: true
+
 
