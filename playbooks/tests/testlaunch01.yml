@@ -3,4 +3,4 @@
 - name: 'Test01'
   hosts: test_pod1
   roles:
-    - adduser_ansible
+    - dist_update_upgrade
