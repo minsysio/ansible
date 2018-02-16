@@ -1,41 +1,41 @@
 ---
 
-- name: Create the user007 group
+- name: Create the user008 group
   group: 
-    name: user007 
+    name: user008 
     state: present
   become: true
 
-- name: Initial admin user creation - user007.
+- name: Initial admin user creation - user008.
   user: 
-    name: user007   
+    name: user008   
     shell: /bin/bash
     createhome: yes 
-    home: /home/user007 
-    groups: user007,sudo,sshusers
+    home: /home/user008 
+    groups: user008,sudo,sshusers
     append: yes
-  register: user007
+  register: user008
   become: true
 
-- name: Create .ssh/ directory in user007 home directory  
+- name: Create .ssh/ directory in user008 home directory  
   file: 
-    path: /home/user007/.ssh 
+    path: /home/user008/.ssh 
     state: directory
-    owner: user007
-    group: user007  
+    owner: user008
+    group: user008  
     mode: "u=rw,g=rw,o=r"
   become: true
 
-- name: Adding the user007 public key to authorized_keys files.
+- name: Adding the user008 public key to authorized_keys files.
   authorized_key: 
-    user: user007 
+    user: user008 
     key: "{{ lookup('file', '/root/.ssh/ansible_rsa') }}"
   become: true
 
 - name: Enable passwordless sudo
   copy:
-    content: "user007 ALL=(ALL) NOPASSWD:ALL"
-    dest: "/etc/sudoers.d/user007"
+    content: "user008 ALL=(ALL) NOPASSWD:ALL"
+    dest: "/etc/sudoers.d/user008"
     owner: "root"
     group: "root"
     mode: "0440"
