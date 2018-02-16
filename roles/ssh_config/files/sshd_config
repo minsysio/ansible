@@ -24,7 +24,7 @@ PasswordAuthentication no
 ChallengeResponseAuthentication no
 PrintLastLog yes
 TCPKeepAlive yes
-UsePAM no
+UsePAM yes
 UseDNS yes
 AllowGroups sshusers
 
