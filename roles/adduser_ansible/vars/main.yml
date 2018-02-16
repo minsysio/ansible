@@ -1,6 +1,6 @@
 ---
 user_name: ansible
-user_groups: [ansible]
+user_groups: [sudo, sshusers]
 user_shell: "/bin/bash"
 user_ssh_key_path: "/root/.ssh/ansible_rsa"
 user_generate_ssh_key: False
