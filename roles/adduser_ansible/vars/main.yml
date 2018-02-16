@@ -1,7 +1,7 @@
 ---
-user_name: "user_test005"
+#user_name: "user_test005"
 #user_usergroup: "user_test005"
 #user_groups: [user_test005, sudo, sshusers]
-user_shell: "/bin/bash"
-user_ssh_key_path: "/root/.ssh/ansible_rsa"
+#user_shell: "/bin/bash"
+#user_ssh_key_path: "/root/.ssh/ansible_rsa"
 #user_passwordless_sudo: True
