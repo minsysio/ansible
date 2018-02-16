@@ -1,10 +1,10 @@
 ---
 
-#- name: Create user group(s)
-#  group:
-#    name: "{{ item }}"
-#  with_items: "{{ user_groups }}"
-#  when: user_groups
+- name: Create user group(s)
+  group:
+    name: "{{ item }}"
+  with_items: "{{ user_creategroups }}"
+  when: user_creategroups
 
 - name: Create user
   user:
