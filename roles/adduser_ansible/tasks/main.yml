@@ -8,9 +8,8 @@
 
 - name: Create user
   user:
-    generate_ssh_key: "{{ user_generate_ssh_key }}"
     groups: "{{ (user_groups | join(',')) }}"
-    append: True
+    append: yes
     name: "{{ user_name }}"
     shell: "{{ user_shell }}"
   become: true
@@ -29,7 +28,6 @@
   authorized_key:
     user: "{{ user_name }}"
     key: "{{ lookup('file', user_ssh_key_path) }}"
-  when: user_ssh_key_path | d()
   become: true
 
 
