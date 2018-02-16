@@ -2,9 +2,8 @@
 
 - name: Create user group(s)
   group:
-    name: "{{ item }}"
-  with_items: "{{ user_creategroups }}"
-  when: user_creategroups
+    name: "{{ user_usergroup }}"
+    state: present
 
 - name: Create user
   user:
