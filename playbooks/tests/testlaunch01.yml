@@ -1,6 +1,6 @@
 ---
 
 - name: 'Test01'
-  hosts: test_pod1
+  hosts: mining_minions
   roles:
-    - dist_update_upgrade
+    - ssh_config

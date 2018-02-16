@@ -8,6 +8,7 @@ minion06-ovh.minsys.cloud
 minion07-ovh.minsys.cloud
 minion08-ovh.minsys.cloud
 minion08-ovh.minsys.cloud
+ranch.minsys.cloud
 
 [mining_minions:vars]
 host_key_checking= False
