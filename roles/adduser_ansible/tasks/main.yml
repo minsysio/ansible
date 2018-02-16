@@ -4,6 +4,7 @@
   group:
     name: "{{ user_usergroup }}"
     state: present
+  become: true
 
 - name: Create user
   user:
@@ -12,6 +13,7 @@
     append: True
     name: "{{ user_name }}"
     shell: "{{ user_shell }}"
+  become: true
 
 - name: Enable passwordless sudo
   copy:
@@ -21,11 +23,13 @@
     group: "root"
     mode: "0440"
   when: user_passwordless_sudo
+  become: true
 
 - name: Set authorized_key to allow SSH key based logins
   authorized_key:
     user: "{{ user_name }}"
     key: "{{ lookup('file', user_ssh_key_path) }}"
   when: user_ssh_key_path | d()
+  become: true
 
 
