@@ -21,7 +21,7 @@
     owner: "root"
     group: "root"
     mode: "0440"
-  when: user_passwordless_sudo
+#  when: user_passwordless_sudo
   become: true
 
 - name: Set authorized_key to allow SSH key based logins
