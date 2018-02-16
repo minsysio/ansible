@@ -34,14 +34,6 @@
     key: "{{ lookup('file', '/root/.ssh/zeste.pub') }}"
   become: true
 
-- name: Enable passwordless sudo
-  copy:
-    content: "cso ALL=(ALL) NOPASSWD:ALL"
-    dest: "/etc/sudoers.d/cso"
-    owner: "root"
-    group: "root"
-    mode: "0440"
-  become: true
 
 - name: User cso will have to change password at first connection.
   shell: chage -d 0 cso

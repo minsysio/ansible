@@ -20,10 +20,11 @@ IgnoreRhosts yes
 RhostsRSAAuthentication no
 HostbasedAuthentication no
 PermitEmptyPasswords no
+PasswordAuthentication no 
 ChallengeResponseAuthentication no
 PrintLastLog yes
 TCPKeepAlive yes
-UsePAM yes
+UsePAM no
 UseDNS yes
 AllowGroups sshusers
 

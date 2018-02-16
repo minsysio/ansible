@@ -10,7 +10,7 @@
 
 - name: Adding existing user ubuntu to group sshusers
   user: name=ubuntu 
-        groups=sudo
+        groups=sshusers
         append=yes
   become: true
 
