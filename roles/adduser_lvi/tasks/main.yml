@@ -16,17 +16,7 @@
     home: /home/lvi 
     groups: lvi,sudo,admins,sshusers
     append: yes
-  register: lvi
   become: true
-
-#- name: Create .ssh/ directory in lvi home directory  
-#  file: 
-#    path: /home/lvi/.ssh 
-#    state: directory
-#    owner: lvi
-#    group: lvi  
-#    mode: "u=rw,g=rw,o=r"
-#  become: true
 
 - name: Adding the lvi public key to authorized_keys files.
   authorized_key: 
@@ -36,6 +26,5 @@
 
 - name: User lvi will have to change password at first connection.
   shell: "chage -d 0 lvi"
-  when: lvi.changed
   become: true
 
