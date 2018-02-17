@@ -16,6 +16,7 @@
     home: /home/lvi 
     groups: lvi,sudo,admins,sshusers
     append: yes
+  register: lvi
   become: true
 
 #- name: Create .ssh/ directory in lvi home directory  
@@ -34,7 +35,7 @@
   become: true
 
 - name: User lvi will have to change password at first connection.
-  shell: chage -d 0 lvi
+  shell: "chage -d 0 lvi"
   when: lvi.changed
   become: true
 
