@@ -5,16 +5,20 @@
 #Misc
 KNOWN_HOSTS=/root/.ssh/known_hosts
 
-#Ansible directory : /etc/ansible 
-ANSIBLE_CONF_DIR=/etc/ansible
-ANSIBLE_INVENTORY_DIR=$ANSIBLE_CONF_DIR/inventory
-ANSIBLE_PODS_DIR=$ANSIBLE_INVENTORY_DIR/pods
-ANSIBLE_PLAYBOOKS_DIR=$ANSIBLE_CONF_DIR/playbooks
-
 #Local SVN repository of Ansible : /opt/ansible 
 ANSIBLE_CONFSVN_DIR=/opt/ansible
 ANSIBLE_CONFSVN_TRUNK_DIR=$ANSIBLE_CONFSVN_DIR/trunk
-LAUNCHPAD_DIR=$ANSIBLE_CONFSVN_TRUNK_DIR/_launchpad 
+#LAUNCHPAD_DIR=$ANSIBLE_CONFSVN_TRUNK_DIR/_launchpad 
+
+#Ansible directory : /etc/ansible 
+ANSIBLE_CONF_DIR=/etc/ansible
+ANSIBLE_INVENTORY_DIR=$ANSIBLE_CONF_DIR/inventory
+ANSIBLE_PLAYBOOKS_DIR=$ANSIBLE_CONF_DIR/playbooks
+LAUNCHPAD_DIR=$ANSIBLE_CONF_DIR/_launchpad
+ANSIBLE_PODS_DIR=$LAUNCHPAD_DIR/_pods
+
+
+
 
 echo "**** INITIALIZATION ****"
 # /root/.ssh/known_hosts exists and is not empty, then zero it. 
