@@ -22,9 +22,9 @@ read -p 'Enter the ++MINION++ IP address  : ' ip_minion
 echo "Ansible Inventory Initilization"
 #echo "[base_minion_cloud]\n$ip_minion\n[base_minion_cloud:vars]\nansible_user= ubuntu\nansible_ssh_private_key_file= /root/.ssh/ansible_rsa\nansible_python_interpreter=/usr/bin/python3" > $ANSIBLE_INVENTORY_DIR/hosts
 (
-  echo [base_minion_cloud]
+  echo [test_pod01]
   echo "$ip_minion"
-  echo [base_minion_cloud:vars]
+  echo [test_pod01:vars]
   echo ansible_user= ubuntu
   echo ansible_ssh_private_key_file= /root/.ssh/ansible_rsa
   echo ansible_python_interpreter=/usr/bin/python3
