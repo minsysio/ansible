@@ -1,6 +1,6 @@
 ---
 
 - name: 'Test01'
-  hosts: mining_minions
+  hosts: test_pod1
   roles:
-    - ssh_config
+    - install_docker-ce
