@@ -12,6 +12,7 @@
     shell: /bin/bash
     password: "{{ 'azerty123' | password_hash('sha512') }}" 
     groups: lvi,sudo,admins,sshusers
+    append: yes
   become: true
 
 - name: Adding the lvi public key to authorized_keys files.
