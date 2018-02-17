@@ -1,7 +1,8 @@
 ---
 
 - name: 'Basic & Standard ++MINION++ Provisionning on minsys.cloud'
-  hosts: test_pod01
+  #to be changed in generic "pod" - this is the "pod" inventory that determine the "hosts" to be in scope of this playbook  
+  hosts: pod
   vars_prompt:
     - name: "confirm"
       prompt: "You really want to initiate this ++MINION++ ? yes / no"

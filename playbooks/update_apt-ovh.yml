@@ -1,6 +1,6 @@
 ---
 
 - name: 'Distribution update : Aptitude UPDATE & UPGRADE'
-  hosts: mining_minions
+  hosts: pod
   roles:
     - dist_update_upgrade

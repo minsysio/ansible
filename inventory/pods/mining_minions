@@ -1,4 +1,4 @@
-[mining_minions]
+[pod]
 minion01-ovh.minsys.cloud
 minion02-ovh.minsys.cloud
 minion03-ovh.minsys.cloud
@@ -10,7 +10,7 @@ minion08-ovh.minsys.cloud
 minion09-ovh.minsys.cloud
 ranch.minsys.cloud
 
-[mining_minions:vars]
+[pod:vars]
 host_key_checking= False
 ansible_ssh_user= ubuntu
 ansible_ssh_private_key_file= /root/.ssh/ansible_rsa

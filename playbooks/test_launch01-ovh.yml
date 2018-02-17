@@ -1,6 +1,6 @@
 ---
 
 - name: 'Test01'
-  hosts: test_pod01
+  hosts: pod
   roles:
     - install_docker-ce
