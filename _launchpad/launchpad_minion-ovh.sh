@@ -25,6 +25,7 @@ echo "Ansible Inventory Initilization"
   echo [test_pod01]
   echo "$ip_minion"
   echo [test_pod01:vars]
+  echo host_key_checking= False
   echo ansible_user= ubuntu
   echo ansible_ssh_private_key_file= /root/.ssh/ansible_rsa
   echo ansible_python_interpreter=/usr/bin/python3
