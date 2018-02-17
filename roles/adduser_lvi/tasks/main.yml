@@ -11,9 +11,6 @@
     name: lvi   
     shell: /bin/bash
     password: "{{ 'azerty123' | password_hash('sha512') }}" 
-    update_password: on_create
-    createhome: yes 
-    home: /home/lvi 
     groups: lvi,sudo,admins,sshusers
     append: yes
   become: true
