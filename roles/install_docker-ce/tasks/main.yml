@@ -23,18 +23,6 @@
     url: https://download.docker.com/linux/ubuntu/gpg
     id: "{{ docker_apt_key }}"
     state: present
-  register: add_repository_key
-  ignore_errors: true
-
-- name: Ensure curl is present (on older systems without SNI).
-  package: name=curl state=present
-  when: add_repository_key|failed
-
-- name: Add Docker apt key (alternative for older systems without SNI).
-  shell: "curl -sSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -"
-  args:
-    warn: no
-  when: add_repository_key|failed
 
 - name: Add Docker repository.
   apt_repository:
@@ -43,7 +31,9 @@
     update_cache: yes
 
 - name: Install Docker.
-  package: name={{ docker_package }} state={{ docker_package_state }}
+  package: 
+    name: "{{ docker_package }}" 
+    state: "{{ docker_package_state }}"
 
 - name: Ensure Docker is started and enabled at boot.
   service:
