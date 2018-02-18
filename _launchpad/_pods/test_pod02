@@ -1,7 +1,7 @@
 [pod]
-minion10.ovh.pl.minsys.cloud
-minion11.ovh.pl.minsys.cloud
-minion12.ovh.pl.minsys.cloud
+54.37.131.14
+145.239.28.173
+54.38.136.39
 
 
 [pod:vars]
