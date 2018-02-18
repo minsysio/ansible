@@ -1,0 +1,17 @@
+---
+
+- name: 'Deploy an OVH minion as rancher registered host' 
+  hosts: pod
+  roles:
+    - dist_update_upgrade
+    - addgroups_initial
+    - adduser_lvi
+    - adduser_cso
+    - motd_minsys
+    - addpackages_initial
+    - fail2ban
+    - ssh_config
+    - install_docker-ce
+    - is_rancher_host
+    
+ 

@@ -1,4 +1,4 @@
 ---
 - name: Register the host in ranch.minsys.cloud
-  shell: docker run --rm --privileged -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/rancher:/var/lib/rancher rancher/agent:v1.2.9 https://ranch.minsys.cloud/v1/scripts/8BE8F9E6708A6BA0B8BF:1514678400000:udoGM4fNzErB3hwcBFeTJogT5pI
-  become: true  
+  shell: docker run --rm --privileged -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/rancher:/var/lib/rancher rancher/agent:v1.2.9 https://ranch.minsys.cloud/v1/scripts/406688A1024510B0AE25:1514678400000:GeJ6SMubI85EAY0VLIpipIEPEg
+  become: true

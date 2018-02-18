@@ -1,5 +1,7 @@
 [pod]
-
+minion10-ovh.minsys.cloud
+minion11-ovh.minsys.cloud
+minion12-ovh.minsys.cloud
 
 
 [pod:vars]
