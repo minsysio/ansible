@@ -1,7 +1,7 @@
 [pod]
-minion10-ovh.minsys.cloud
-minion11-ovh.minsys.cloud
-minion12-ovh.minsys.cloud
+minion10.ovh.pl.minsys.cloud
+minion11.ovh.pl.minsys.cloud
+minion12.ovh.pl.minsys.cloud
 
 
 [pod:vars]
