@@ -34,7 +34,7 @@
     update_cache: yes
   become: true
 
-- name: Install Docker.
+- name: Install Docker CE.
   package: 
     name: "{{ docker_package }}" 
     state: "{{ docker_package_state }}"

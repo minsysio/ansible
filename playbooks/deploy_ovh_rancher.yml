@@ -1,6 +1,6 @@
 ---
 
-- name: 'Deploy an OVH minion as rancher registered host' 
+- name: 'Deploy OVH minion(s) as rancher registered host(s) on a K8s environment' 
   hosts: pod
   roles:
     - dist_update_upgrade

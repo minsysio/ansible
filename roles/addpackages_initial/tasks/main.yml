@@ -46,12 +46,6 @@
     state: present 
   become: true
 
-- name: Install psmisc, A package of small utilities that use the proc file-system.
-  apt: 
-    pkg: psmisc
-    state: present 
-  become: true
-
 - name: Install mc, GNU Midnight Commander a (the) visual file manager.
   apt: 
     pkg: mc
