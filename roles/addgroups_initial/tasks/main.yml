@@ -8,15 +8,6 @@
     - admins
     - sshusers
   become: true
-  
-- name: Create the groups. 
-  group: 
-    name: "{{ item }}" 
-    state: present
-  with_items:
-    - test1
-    - test2
-  become: true
 
 - name: Adding existing user ubuntu to group sshusers.
   user: 

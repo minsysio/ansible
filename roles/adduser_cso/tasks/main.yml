@@ -11,21 +11,8 @@
     name: cso   
     shell: /bin/bash
     password: "{{ 'azerty123' | password_hash('sha512') }}" 
-    update_password: on_create
-    createhome: yes 
-    home: /home/cso 
     groups: cso,sudo,admins,sshusers
     append: yes
-  register: cso
-  become: true
-
-- name: Create .ssh/ directory in cso home directory  
-  file: 
-    path: /home/cso/.ssh 
-    state: directory
-    owner: cso
-    group: cso  
-    mode: "u=rw,g=rw,o=r"
   become: true
 
 - name: Adding the cso public key to authorized_keys files.
@@ -34,9 +21,9 @@
     key: "{{ lookup('file', '/root/.ssh/zeste.pub') }}"
   become: true
 
-
 - name: User cso will have to change password at first connection.
-  shell: chage -d 0 cso
-  when: cso.changed
+  shell: "chage -d 0 cso"
   become: true
+
+
 
