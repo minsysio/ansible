@@ -7,6 +7,7 @@
     - docker
     - docker-engine
     - docker.io
+  become: true
 
 - name: Ensure depdencies are installed.
   apt:
@@ -17,26 +18,31 @@
     - ca-certificates
     - curl 
     - software-properties-common
+  become: true
 
 - name: Add Docker apt key.
   apt_key:
     url: https://download.docker.com/linux/ubuntu/gpg
     id: "{{ docker_apt_key }}"
     state: present
+  become: true
 
 - name: Add Docker repository.
   apt_repository:
     repo: "{{ docker_apt_repository }}"
     state: present
     update_cache: yes
+  become: true
 
 - name: Install Docker.
   package: 
     name: "{{ docker_package }}" 
     state: "{{ docker_package_state }}"
+  become: true
 
 - name: Ensure Docker is started and enabled at boot.
   service:
     name: docker
     state: started
     enabled: yes
+  become: true
