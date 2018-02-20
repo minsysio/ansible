@@ -10,5 +10,6 @@
     - addpackages_initial
     - fail2ban
     - ssh_config
+    - install_docker-ce
     
  

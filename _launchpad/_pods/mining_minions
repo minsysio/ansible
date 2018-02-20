@@ -8,6 +8,9 @@ minion06-ovh.minsys.cloud
 minion07-ovh.minsys.cloud
 minion08-ovh.minsys.cloud
 minion09-ovh.minsys.cloud
+minion10-ovh.minsys.cloud
+minion11-ovh.minsys.cloud
+minion12-ovh.minsys.cloud
 
 [pod:vars]
 host_key_checking= False
