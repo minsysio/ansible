@@ -1,4 +1,5 @@
 ---
+
 - name: Run prom/prometheus:latest Docker container
   docker_container:
     image: "{{ prometheus_container_image }}"
