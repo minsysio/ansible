@@ -3,5 +3,4 @@
 - name: 'Test01'
   hosts: pod
   roles:
-    - install_docker-ce
-    - is_rancher_host
+    - prometheus_node_docker
