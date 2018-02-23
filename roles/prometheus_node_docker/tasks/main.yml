@@ -1,0 +1,12 @@
+---
+- name: Run prom/prometheus:latest Docker container
+  docker_container:
+    image: "{{ prometheus_container_image }}"
+    state: started
+    ports:
+      - "{{ prometheus_host_port }}:{{ prometheus_container_port }}"
+    name: "{{ prometheus_container_prefix }}-{{ ansible_hostname }}"
+    labels:
+      - "isLabel=yes"
+      - "service=prometheus"
+    restart_policy: always

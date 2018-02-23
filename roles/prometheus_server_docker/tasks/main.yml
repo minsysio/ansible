@@ -1,0 +1,33 @@
+---
+- name: create ext storage volume
+  file: state=directory path={{ ext_prometheus_storage_volume }}
+  tags:
+    - docker
+
+- name: create ext config volume
+  file: state=directory path={{ ext_prometheus_conf_volume }}
+  tags:
+    - docker
+
+- name: put prometheus.yml
+  template: src=prometheus.yml dest={{ ext_prometheus_conf_volume }}/prometheus.yml
+  tags:
+    - docker
+
+- name: start prometheus container
+  docker:
+    image: prom/prometheus
+    state: started
+    read_only: yes
+    hostname: "prom-{{ ansible_hostname }}"
+    ports:
+      - "{{ prometheus_host_port }}:{{ prometheus_container_port }}"
+    volumes:
+      - "{{ ext_prometheus_conf_volume }}/prometheus.yml:/etc/prometheus/prometheus.yml"
+      - "{{ ext_prometheus_conf_json_volume }}:/etc/prometheus/json"
+      - "{{ ext_prometheus_storage_volume }}:/prometheus"
+    name: "{{ prometheus_container_name }}"
+    restart_policy: always
+    restart_policy_retry: 10000000
+  tags:
+    - docker

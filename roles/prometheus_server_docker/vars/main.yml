@@ -1,0 +1,7 @@
+ext_prometheus_storage_volume: /var/lib/docker-extvols/prometheus-storage
+ext_prometheus_conf_volume: /var/lib/docker-extvols/prometheus-conf
+ext_prometheus_conf_json_volume: /var/lib/docker-extvols/prometheus-conf-json
+
+prometheus_host_port: 9090
+prometheus_container_port: 9090
+prometheus_container_prefix: prometheus
