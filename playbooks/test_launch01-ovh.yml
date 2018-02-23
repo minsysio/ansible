@@ -3,4 +3,6 @@
 - name: 'Test01'
   hosts: pod
   roles:
+    - node-exporter_docker
+    - cadvisor_docker
     - prometheus_node_docker

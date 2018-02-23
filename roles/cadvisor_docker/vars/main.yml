@@ -1,0 +1,6 @@
+node-exporter_host_port: 9200
+
+node-exporter_container_image: google/cadvisor
+node-exporter_container_tag: latest
+node-exporter_container_port: 8080
+node-exporter_container_prefix: cadvisor

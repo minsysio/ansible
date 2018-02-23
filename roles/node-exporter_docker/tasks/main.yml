@@ -1,0 +1,5 @@
+---
+
+- name: Run prom/prometheus:latest Docker container
+  shell: docker run --publish="{{ node-exporter_host_port }}":"{{ node-exporter_container_port }}" --detach=true --label=isLabel=true --label=service=node_exporter --name="{{ node-exporter_container_prefix }}_{{ ansible_hostname }}" "{{ node-exporter_container_image }}:{{ node-exporter_container_tag }}"
+  become: true
