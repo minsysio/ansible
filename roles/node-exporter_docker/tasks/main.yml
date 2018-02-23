@@ -1,5 +1,5 @@
 ---
 
 - name: Run prom/node-exporter:latest Docker container
-  shell: ddocker run --publish="{{ node-exporter_host_port }}":"{{ node-exporter_container_port }}" --detach=true --label=isLabel=true --label=service=nodeexporter --name="{{ node-exporter_container_prefix }}_{{ ansible_hostname }}" "{{ node-exporter_container_image }}:{{ node-exporter_container_tag }}"
+  shell: ddocker run --publish="{{ node_exporter_host_port }}":"{{ node_exporter_container_port }}" --detach=true --label=isLabel=true --label=service=node_exporter --name="{{ node_exporter_container_prefix }}_{{ ansible_hostname }}" "{{ node_exporter_container_image }}:{{ node_exporter_container_tag }}"
   become: true
