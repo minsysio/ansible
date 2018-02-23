@@ -1,10 +1,5 @@
 ---
 
 - name: Run prom/prometheus:latest Docker container
-  docker_container:
-    image: "{{ prometheus_container_image }}"
-    state: started
-    ports:
-      - "{{ prometheus_host_port }}:{{ prometheus_container_port }}"
-    name: "{{ prometheus_container_prefix }}-{{ ansible_hostname }}"
-    restart_policy: always
+  shell: sudo docker run --publish="{{ prometheus_host_port }}":"{{ prometheus_container_port }}" --detach=true --label=isLabel=true --label=service=prometheus --name="{{ prometheus_container_prefix }}-{{ ansible_hostname }}" "{{ prometheus_container_image }}:{{ prometheus_container_tag }}"
+  become: true

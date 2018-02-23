@@ -1,5 +1,6 @@
 prometheus_host_port: 9090
 
-prometheus_container_image: prom/prometheus:latest
+prometheus_container_image: prom/prometheus
+prometheus_container_tag: latest
 prometheus_container_port: 9090
 prometheus_container_prefix: prometheus
