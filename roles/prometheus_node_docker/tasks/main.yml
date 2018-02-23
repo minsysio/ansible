@@ -8,6 +8,6 @@
       - "{{ prometheus_host_port }}:{{ prometheus_container_port }}"
     name: "{{ prometheus_container_prefix }}-{{ ansible_hostname }}"
     labels:
-      - "isLabel=yes"
-      - "service=prometheus"
+      - isLabel=yes
+      - service=prometheus
     restart_policy: always
