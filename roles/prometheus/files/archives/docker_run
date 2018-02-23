@@ -1,0 +1,24 @@
+
+
+1 - Node Exporter
+
+sudo docker run --publish=9100:9100 --detach=true --name=node_exporter prom/node-exporter:latest
+
+2- cAdvisor
+
+sudo docker run \
+  --volume=/:/rootfs:ro \
+  --volume=/var/run:/var/run:rw \
+  --volume=/sys:/sys:ro \
+  --volume=/var/lib/docker/:/var/lib/docker:ro \
+  --volume=/dev/disk/:/dev/disk:ro \
+  --publish=9200:8080 \
+  --detach=true \
+  --name=cadvisor \
+  google/cadvisor:latest
+
+
+
+3 - Prometheus
+
+docker run --publish=9090:9090 --detach=true --name=prometheus prom/prometheus:latest
