@@ -13,6 +13,7 @@ scrape_configs:
     - localhost:9090
     - 142.44.165.195:9090
     - 66.70.185.189:9090
+    - 54.39.58.116:9090
     - minion01-ovh.minsys.cloud:9090
     - minion02-ovh.minsys.cloud:9090
     - minion03-ovh.minsys.cloud:9090
@@ -36,6 +37,7 @@ scrape_configs:
     - localhost:9100
     - 142.44.165.195:9100
     - 66.70.185.189:9100
+    - 54.39.58.116:9100
     - minion01-ovh.minsys.cloud:9100
     - minion02-ovh.minsys.cloud:9100
     - minion03-ovh.minsys.cloud:9100
@@ -57,6 +59,7 @@ scrape_configs:
   static_configs:
   - targets:
     - 66.70.185.189:9200
+    - 54.39.58.116:9200
     - minion01-ovh.minsys.cloud:9200
     - minion01-ovh.minsys.cloud:9200
     - minion02-ovh.minsys.cloud:9200
