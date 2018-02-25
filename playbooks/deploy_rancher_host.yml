@@ -12,6 +12,9 @@
     - fail2ban
     - ssh_config
     - install_docker-ce
+    - node-exporter_docker
+    - cadvisor_docker
+    - prometheus_node_docker
     - is_rancher_host
     
  
