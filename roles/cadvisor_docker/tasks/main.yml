@@ -1,5 +1,5 @@
 ---
 
 - name: Run google/cadvisor:latest Docker container
-  shell: docker run --volume=/:/rootfs:ro --volume=/var/run:/var/run:rw --volume=/sys:/sys:ro --volume=/var/lib/docker/:/var/lib/docker:ro --volume=/dev/disk/:/dev/disk:ro --publish="{{ cadvisor_host_port }}":"{{ cadvisor_container_port }}" --detach=true --label=isLabel=true --label=service=cadvisor --name="{{ cadvisor_container_prefix }}_{{ ansible_hostname }}" "{{ cadvisor_container_image }}:{{ cadvisor_container_tag }}"
+  shell: docker run --volume=/:/rootfs:ro --volume=/var/run:/var/run:rw --volume=/sys:/sys:ro --volume=/var/lib/docker/:/var/lib/docker:ro --volume=/dev/disk/:/dev/disk:ro --publish="{{ cadvisor_host_ip_tobind }}":"{{ cadvisor_host_port }}":"{{ cadvisor_container_port }}" --detach=true --restart=always --label=service=cadvisor --name="{{ cadvisor_container_prefix }}_{{ ansible_hostname }}" "{{ cadvisor_container_image }}:{{ cadvisor_container_tag }}"
   become: true

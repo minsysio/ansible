@@ -1,4 +1,5 @@
 cadvisor_host_port: 9200
+cadvisor_host_ip_tobind: localhost
 
 cadvisor_container_image: google/cadvisor
 cadvisor_container_tag: latest
