@@ -14,3 +14,4 @@
     - node-exporter_docker
     - cadvisor_docker
     - prometheus_node_docker
+    - nginx_initial
