@@ -1,6 +1,0 @@
----
-
-- name: 'Distribution update : Aptitude UPDATE & UPGRADE'
-  hosts: pod
-  roles:
-    - dist_update_upgrade

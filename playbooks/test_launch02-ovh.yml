@@ -1,0 +1,13 @@
+---
+
+- name: 'Test 02' 
+  hosts: pod
+  roles:
+    - dist_update_upgrade
+    - addgroups_initial
+    - adduser_lvi
+    - motd_minsys
+    - addpackages_initial
+    - fail2ban
+    - ssh_config
+    - install_docker-ce
