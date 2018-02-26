@@ -1,0 +1,30 @@
+---
+#https://github.com/geerlingguy/ansible-role-nginx/blob/master/tasks/main.yml
+
+- name: Install nginx.
+  apt: 
+    pkg: nginx 
+    state: present
+  become: true
+
+- name: Copy nginx configuration 
+  copy: 
+    src: /etc/ansible/roles/nginx_initial/files/nginx.conf
+    dest: /etc/nginx/nginx.conf
+    owner: root 
+    group: root
+    mode: "u=rw,g=r,o=r"
+  become: true
+
+- name: Copy proxy_monitoring configuration 
+  copy: 
+    src: /etc/ansible/roles/nginx_initial/files/proxy_monitoring.conf
+    dest: /etc/nginx/conf.d/proxy_monitoring.conf
+    owner: root 
+    group: root
+    mode: "u=rw,g=r,o=r"
+  become: true
+
+- name: Restart nginx daemon with new config
+  command: systemctl restart nginx.service  
+  become: true
