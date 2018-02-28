@@ -1,4 +1,4 @@
-cadvisor_host_port: 9200
+cadvisor_host_port: 19200
 cadvisor_host_ip_tobind: 127.0.0.1
 
 cadvisor_container_image: google/cadvisor

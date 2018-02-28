@@ -1,7 +1,8 @@
-prometheus_host_port: 9090
+prometheus_host_port: 19090
 prometheus_host_ip_tobind: 127.0.0.1
 
 prometheus_container_image: prom/prometheus
 prometheus_container_tag: latest
 prometheus_container_port: 9090
 prometheus_container_prefix: prometheus
+
