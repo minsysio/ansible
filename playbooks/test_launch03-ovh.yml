@@ -12,6 +12,5 @@
     - fail2ban
     - ssh_config
     - install_docker-ce
-    - nginx_initial
     - is_rancher_host
     
