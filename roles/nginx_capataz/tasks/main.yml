@@ -1,0 +1,16 @@
+---
+#https://github.com/geerlingguy/ansible-role-nginx/blob/master/tasks/main.yml
+
+
+- name: Copy proxy_rancher configuration 
+  copy: 
+    src: /etc/ansible/roles/nginx_initial/files/proxy_rancher.conf
+    dest: /etc/nginx/conf.d/proxy_rancher.conf
+    owner: root 
+    group: root
+    mode: "u=rw,g=r,o=r"
+  become: true
+
+- name: Reload nginx daemon with new config
+  command: systemctl reload nginx.service  
+  become: true
