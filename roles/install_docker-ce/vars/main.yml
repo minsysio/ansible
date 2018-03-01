@@ -1,7 +1,9 @@
 ---
 # Edition can be one of: 'ce' (Community Edition) or 'ee' (Enterprise Edition).
 docker_edition: 'ce'
-docker_package: "docker-{{ docker_edition }}"
+#see "apt-cache madison docker-ce" output for a list a av. version  
+docker_version: '17.12.0~ce-0~ubuntu'
+docker_package: "docker-{{ docker_edition }}={{ docker_version }}"
 docker_package_state: present
 docker_apt_key: "9DC858229FC7DD38854AE2D88D81803C0EBFCD88"
 
