@@ -35,6 +35,3 @@ server {
     server_name marucho01.ovh.ca.minsys.cloud marucho01-ovh.minsys.cloud;
     return 301 https://$server_name$request_uri;
 }
-
-
-$4VCdMoIqu*zJ4SlConTENTaAk48k68Ev5#
