@@ -1,0 +1,20 @@
+---
+
+- name: 'Deploy OVH minion(s) as rancher registered K8s masters on a K8s environment' 
+  hosts: pod
+  roles:
+    - dist_update_upgrade
+    - addgroups_initial
+    - adduser_lvi
+    - motd_minsys
+    - addpackages_initial
+    - fail2ban
+    - ssh_config
+    - install_docker-ce
+    - node-exporter_docker
+    - cadvisor_docker
+    - prometheus_node_docker
+    - nginx_initial
+    - is_rancher_k8s_master
+    
+ 
