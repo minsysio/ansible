@@ -1,0 +1,67 @@
+global:
+  scrape_interval: 15s
+  scrape_timeout: 10s
+  evaluation_interval: 1m
+scrape_configs:
+- job_name: prometheus
+  scrape_interval: 20s
+  scrape_timeout: 20s
+  metrics_path: /metrics
+  scheme: http
+  static_configs:
+  - targets:
+    - 54.39.59.216:9090
+- job_name: node_exporter
+  scrape_interval: 15s
+  scrape_timeout: 15s
+  metrics_path: /metrics
+  scheme: http
+  static_configs:
+  - targets:
+    - 127.0.0.1:9100
+- job_name: cadvisor
+  scrape_interval: 15s
+  scrape_timeout: 15s
+  metrics_path: /metrics
+  scheme: http
+  static_configs:
+  - targets:
+    - 54.39.59.216:9200
+- job_name: 'blackbox'
+  scrape_interval: 60s
+  scrape_timeout: 60s
+  metrics_path: /probe
+  params:
+    module: [icmp]
+  static_configs:
+  - targets:
+    - marucho01-ovh.minsys.cloud
+    - capataz01-ovh.minsys.cloud
+    - k8smaster01-ovh.minsys.cloud
+    - k8smaster02-ovh.minsys.cloud
+    - k8smaster03-ovh.minsys.cloud
+    - minion01-ovh.minsys.cloud
+    - minion02-ovh.minsys.cloud
+    - minion03-ovh.minsys.cloud
+    - minion04-ovh.minsys.cloud
+    - minion05-ovh.minsys.cloud
+    - minion06-ovh.minsys.cloud
+    - minion07-ovh.minsys.cloud
+    - minion08-ovh.minsys.cloud
+    - minion09-ovh.minsys.cloud
+    - minion10-ovh.minsys.cloud
+    - minion11-ovh.minsys.cloud
+    - minion12-ovh.minsys.cloud       
+    - www.hbitconsulting.com
+    - www.cloudlifters.pro
+    - bastion01.au.minsys.cloud
+    - bastion01.ca.minsys.cloud
+    - bastion01.fr.minsys.cloud
+  relabel_configs:
+    - source_labels: [__address__]
+      target_label: __param_target
+    - source_labels: [__address__]
+      target_label: instance
+    - source_labels: []
+      target_label: __address__
+      replacement: 54.39.59.216:9115  # Blackbox exporter.

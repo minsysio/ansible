@@ -11,22 +11,6 @@ scrape_configs:
   static_configs:
   - targets:
     - marucho01-ovh.minsys.cloud:9090
-    - k8smaster01-ovh.minsys.cloud:9090
-    - k8smaster02-ovh.minsys.cloud:9090
-    - k8smaster03-ovh.minsys.cloud:9090
-    - capataz01-ovh.minsys.cloud:9090
-    - minion01-ovh.minsys.cloud:9090
-    - minion02-ovh.minsys.cloud:9090
-    - minion03-ovh.minsys.cloud:9090
-    - minion04-ovh.minsys.cloud:9090
-    - minion05-ovh.minsys.cloud:9090
-    - minion06-ovh.minsys.cloud:9090
-    - minion07-ovh.minsys.cloud:9090
-    - minion08-ovh.minsys.cloud:9090
-    - minion09-ovh.minsys.cloud:9090
-    - minion10-ovh.minsys.cloud:9090
-    - minion11-ovh.minsys.cloud:9090
-    - minion12-ovh.minsys.cloud:9090
 - job_name: node_exporter
   scrape_interval: 15s
   scrape_timeout: 15s

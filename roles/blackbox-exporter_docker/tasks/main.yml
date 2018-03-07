@@ -1,0 +1,5 @@
+---
+
+- name: Run prom/blackbox-exporter Docker container
+  shell: docker run --volume="{{ blackbox_host_volume_config }}":"{{ blackbox_container_volume_config }}" --publish="{{ blackbox_host_ip_tobind }}":"{{ blackbox_host_port }}":"{{ blackbox_container_port }}" --detach=true --restart=always --label=service="{{ blackbox_container_prefix }}" --name="{{ blackbox_container_prefix }}" "{{ blackbox_container_image }}":"{{ blackbox_container_tag }}"
+  become: true

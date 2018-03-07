@@ -1,0 +1,11 @@
+blackbox_host_port: 9115
+blackbox_host_ip_tobind: 127.0.0.1
+blackbox_host_volume_config: /opt/minsys/blackbox/config
+
+blackbox_container_image: prom/blackbox-exporter
+blackbox_container_tag: latest
+blackbox_container_port: 9115
+blackbox_container_prefix: blackbox_exporter
+blackbox_container_volume_config: /etc/blackbox_exporter
+
+# 127.0.0.1:9115:9115
