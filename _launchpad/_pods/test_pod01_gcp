@@ -1,0 +1,9 @@
+[pod]
+35.224.207.212
+
+
+[pod:vars]
+host_key_checking= False
+ansible_ssh_user= root
+ansible_ssh_private_key_file= /root/.ssh/ansible_rsa
+ansible_python_interpreter=/usr/bin/python3
