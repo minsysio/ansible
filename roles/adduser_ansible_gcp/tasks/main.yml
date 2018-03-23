@@ -10,7 +10,7 @@
   user: 
     name: ansible   
     shell: /bin/bash
-    groups: ansible,sudo,sshusers
+    groups: ansible,google-sudoers,sshusers
     append: yes
   become: true
 
