@@ -1,0 +1,26 @@
+---
+
+- name: Create the dummy group
+  group: 
+    name: dummy 
+    state: present
+  become: true
+
+- name: Initial user creation - dummy.
+  user: 
+    name: dummy   
+    shell: /bin/bash
+    groups: dummy,sudo,sshusers
+    append: yes
+  become: true
+
+- name: Adding the dummy public key to authorized_keys files.
+  authorized_key: 
+    user: dummy 
+    key: "{{ lookup('file', '/root/.ssh/dummy_pprsa.pub') }}"
+  become: true
+
+- name: User dummy will have to change password at first connection.
+  shell: "chage -d 0 dummy"
+  become: true
+
