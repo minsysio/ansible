@@ -17,7 +17,7 @@
 - name: Adding the dummy public key to authorized_keys files.
   authorized_key: 
     user: dummy 
-    key: "{{ lookup('file', '/root/.ssh/dummy_pprsa.pub') }}"
+    key: "{{ lookup('file', '/root/.ssh/lvi_pprsa.pub') }}"
   become: true
 
 - name: User dummy will have to change password at first connection.
