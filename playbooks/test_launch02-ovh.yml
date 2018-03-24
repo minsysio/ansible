@@ -6,9 +6,9 @@
     - dist_update_upgrade
 #    - addgroups_initial
 #    - adduser_lvi
-    - motd_minsys
-    - addpackages_initial
-    - fail2ban
+#    - motd_minsys
+#    - addpackages_initial
+#    - fail2ban
 #    - ssh_config
     - install_docker-ce
     - node-exporter_docker
