@@ -38,6 +38,10 @@ scrape_configs:
     - scout01-gcp.minsys.cloud:9100
     - scout02-gcp.minsys.cloud:9100
     - scout03-gcp.minsys.cloud:9100
+    - vpnsslfr-ovh.minsys.cloud:9100
+    - bastion02-ovh.minsys.cloud:9100
+    - bastion01-gcp.minsys.cloud:9100
+    - domador01-gcp.minsys.cloud:9100
 - job_name: cadvisor
   scrape_interval: 20s
   scrape_timeout: 20s
@@ -64,4 +68,8 @@ scrape_configs:
     - minion12-ovh.minsys.cloud:9200
     - scout01-gcp.minsys.cloud:9200
     - scout02-gcp.minsys.cloud:9200
-    - scout03-gcp.minsys.cloud:9200    
+    - scout03-gcp.minsys.cloud:9200
+    - vpnsslfr-ovh.minsys.cloud:9200
+    - bastion02-ovh.minsys.cloud:9200
+    - bastion01-gcp.minsys.cloud:9200
+    - domador01-gcp.minsys.cloud:9200   
