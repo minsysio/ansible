@@ -12,8 +12,8 @@ scrape_configs:
   - targets:
     - marucho01-ovh.minsys.cloud:9090
 - job_name: node_exporter
-  scrape_interval: 15s
-  scrape_timeout: 15s
+  scrape_interval: 20s
+  scrape_timeout: 20s
   metrics_path: /metrics
   scheme: http
   static_configs:
@@ -35,9 +35,12 @@ scrape_configs:
     - minion10-ovh.minsys.cloud:9100
     - minion11-ovh.minsys.cloud:9100
     - minion12-ovh.minsys.cloud:9100
+    - scout01-gcp.minsys.cloud:9100
+    - scout02-gcp.minsys.cloud:9100
+    - scout03-gcp.minsys.cloud:9100
 - job_name: cadvisor
-  scrape_interval: 15s
-  scrape_timeout: 15s
+  scrape_interval: 20s
+  scrape_timeout: 20s
   metrics_path: /metrics
   scheme: http
   static_configs:
@@ -59,3 +62,6 @@ scrape_configs:
     - minion10-ovh.minsys.cloud:9200
     - minion11-ovh.minsys.cloud:9200
     - minion12-ovh.minsys.cloud:9200
+    - scout01-gcp.minsys.cloud:9200
+    - scout02-gcp.minsys.cloud:9200
+    - scout03-gcp.minsys.cloud:9200    
