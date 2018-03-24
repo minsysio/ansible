@@ -1,5 +1,6 @@
 [pod]
-66.70.187.49
+37.59.104.229
+139.99.158.130
 
 [pod:vars]
 host_key_checking= False
