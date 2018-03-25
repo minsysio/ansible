@@ -1,7 +1,6 @@
 [pod]
-scout01-gcp.minsys.cloud
-scout02-gcp.minsys.cloud
-scout03-gcp.minsys.cloud
+domador01-gcp.minsys.cloud
+bastion01-gcp.minsys.cloud
 
 [pod:vars]
 host_key_checking= False
