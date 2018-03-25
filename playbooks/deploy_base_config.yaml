@@ -1,6 +1,6 @@
- ---
+---
 
-- name: 'Deploy base config from GCP to minsys.cloud' 
+- name: 'Deploy base config to minsys.cloud' 
   hosts: pod
   roles:
     - dist_update_upgrade
