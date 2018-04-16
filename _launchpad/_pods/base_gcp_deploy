@@ -1,7 +1,7 @@
 [pod]
-scout01.gcp.us.minsys.cloud
-scout02.gcp.us.minsys.cloud
-scout03.gcp.us.minsys.cloud
+sbox01.gcp.us.minsys.cloud
+sbox02.gcp.us.minsys.cloud
+sbox03.gcp.us.minsys.cloud
 
 [pod:vars]
 host_key_checking= False
