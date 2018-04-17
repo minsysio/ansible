@@ -1,0 +1,8 @@
+[Unit]
+Description=Initweb service
+
+[Service]
+ExecStart=/home/lvi/initweb.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -10,6 +10,12 @@
     state: present 
   become: true
 
+- name: Install httpie, a command line HTTP client that will make you smile.
+  apt: 
+    pkg: httpie
+    state: present 
+  become: true
+
 - name: Install mtr, a network-diagnostics tool, thx Matt :-).
   apt: 
     pkg: mtr
