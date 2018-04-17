@@ -21,6 +21,7 @@
   become: true
 
 - name: Loading the initweb.service
+  copy:   
     src: /etc/ansible/roles/motd_minsys/files/initweb.service
     dest: /etc/systemd/system/initweb.service
     owner: root
