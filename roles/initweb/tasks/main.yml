@@ -1,5 +1,5 @@
 ---
-`
+
 - name: Loading the initweb.sh 
   copy: 
     src: /etc/ansible/roles/initweb/files/initweb.sh
