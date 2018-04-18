@@ -21,3 +21,8 @@
     group: root
     mode: "u=rwx,g=rx,o=rx"
   become: true  
+
+
+- name: Enable initweb.service at startup
+  command: systemctl enable nginx.service  
+  become: true
