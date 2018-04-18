@@ -1,7 +1,7 @@
 #!/bin/sh
 
 WANIP=$(curl ifconfig.co)
-COUNTRYCODEISO=$(http -b ifconfig.co/country-iso)
+COUNTRYCODEISO=$(http ifconfig.co/country-iso)
 
 echo '
 <!DOCTYPE html>
