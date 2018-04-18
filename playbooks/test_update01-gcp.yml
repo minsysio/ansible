@@ -8,7 +8,7 @@
 #    - adduser_ansible_gcp
 #    - adduser_lvi
 #    - motd_minsys
-    - addpackages_initial
+    - initweb
 #    - fail2ban
 #    - ssh_config
 #    - install_docker-ce
@@ -16,3 +16,4 @@
 #    - cadvisor_docker
 #    - prometheus_node_docker
 #    - nginx_initial
+
