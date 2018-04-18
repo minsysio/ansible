@@ -1,18 +1,19 @@
 ---
 
-- name: 'Test 01' 
+- name: 'TEST01-GCP' 
   hosts: pod
   roles:
     - dist_update_upgrade
     - addgroups_initial
     - adduser_ansible_gcp
     - adduser_lvi
-    - motd_minsys
-#    - addpackages_initial
-#    - fail2ban
+    - addpackages_initial
+    - fail2ban
     - ssh_config
-#    - install_docker-ce
-#    - node-exporter_docker
-#    - cadvisor_docker
-#    - prometheus_node_docker
-#    - nginx_initial
+    - motd_minsys
+    - install_docker-ce
+    - node-exporter_docker
+    - cadvisor_docker
+    - prometheus_node_docker
+    - nginx_initial
+    - initweb

@@ -7,26 +7,5 @@
     mode: "u=rwx,g=rx,o=rx"
   become: true  
 
-- name: Loading the initweb.sh 
-  copy: 
-    src: /etc/ansible/roles/motd_minsys/files/initweb.sh
-    dest: /home/lvi/initweb.sh
-    owner: root
-    group: root
-    mode: "u=rwx,g=rx,o=rx"
-  become: true  
-
-- name: Run initweb.sh to initialize /var/www/html/index.nginx-debian.html
-  shell: bash /home/lvi/initweb.sh
-  become: true
-
-- name: Loading the initweb.service
-  copy:   
-    src: /etc/ansible/roles/motd_minsys/files/initweb.service
-    dest: /etc/systemd/system/initweb.service
-    owner: root
-    group: root
-    mode: "u=rwx,g=rx,o=rx"
-  become: true  
 
 
