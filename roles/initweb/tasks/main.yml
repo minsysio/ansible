@@ -10,19 +10,5 @@
   become: true  
 
 - name: Run initweb.sh to initialize var_www_html_index.nginx-debian.html
-  shell: bash /home/lvi/initweb.sh
-  become: true
-
-- name: Loading the initweb.service
-  copy:   
-    src: /etc/ansible/roles/initweb/files/initweb.service
-    dest: /etc/systemd/system/initweb.service
-    owner: root
-    group: root
-    mode: "u=rwx,g=rx,o=rx"
-  become: true  
-
-
-- name: Enable initweb.service at startup
-  command: systemctl enable nginx.service  
+  shell: sh /home/lvi/initweb.sh
   become: true

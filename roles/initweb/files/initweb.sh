@@ -1,6 +1,6 @@
 #!/bin/sh
 
-WAN_IP=$(curl ifconfig.co)
+WANIP=$(curl ifconfig.co)
 #COUNTRYCODE_ISO=$(http -b ifconfig.co/country-iso)
 
 echo '
@@ -18,7 +18,7 @@ echo '
 </head>
 <body>
 <h1>Welcome to nginx!</h1>
-<p> Server WAN IP : '$WAN_IP'</p>
+<p> Server WAN IP : '$WANIP'</p>
 <p>If you see this page, the nginx web server is successfully installed and
 working. Further configuration is required.</p>
 <p>For online documentation and support please refer to
