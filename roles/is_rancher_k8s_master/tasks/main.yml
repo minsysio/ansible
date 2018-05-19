@@ -1,4 +1,4 @@
 ---
 - name: Register the host as k8s master node in rancher minsys.cloud
-  shell: docker run -e CATTLE_HOST_LABELS='compute=true&etcd=true&orchestration=true&io.minsys.cloud.host.role=k8smaster'  --rm --privileged -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/rancher:/var/lib/rancher rancher/agent:v1.2.9 https://capataz01-ovh.minsys.cloud/v1/scripts/1456C6FD1EB24A05CDE4:1514678400000:kW9AQN2Wut78qLXfYJMKfLl2M
+  shell: docker run -e CATTLE_HOST_LABELS='compute=true&etcd=true&orchestration=true'  --rm --privileged -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/rancher:/var/lib/rancher rancher/agent:v1.2.9 https://capataz01-ovh.minsys.cloud/v1/scripts/619BDB1CA05832D53577:1514678400000:4tLmUf2Q5juhGCILemqfcdSkvHk
   become: true
