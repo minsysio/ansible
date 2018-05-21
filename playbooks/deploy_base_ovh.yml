@@ -1,0 +1,12 @@
+---
+
+- name: 'Deploy base config to minsys.cloud' 
+  hosts: pod
+  roles:
+    - dist_update_upgrade
+    - addgroups_initial
+    - adduser_lvi
+    - addpackages_initial
+    - fail2ban
+    - ssh_config
+    - motd_minsys
