@@ -1,5 +1,5 @@
 [pod]
-capataz02.ovh.ca.minsys.cloud
+capataz02-ovh.minsys.cloud
 
 [pod:vars]
 host_key_checking= False
