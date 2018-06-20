@@ -1,0 +1,11 @@
+- name: Loading the treeptik motd  
+  copy: 
+    src: /etc/ansible/roles/motd_treeptik/files/20_treeptik-motd
+    dest: /etc/update-motd.d/99-treeptik-motd
+    owner: root
+    group: root
+    mode: "u=rwx,g=rx,o=rx"
+  become: true  
+
+
+
